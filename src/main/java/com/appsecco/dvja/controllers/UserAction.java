@@ -9,7 +9,14 @@ public class UserAction extends BaseController {
     private UserService userService;
     private User user;
     private String login;
-    private String password;
+    private char[] password;
+
+    public void setPassword(char[] passwordInput) {
+    this.password = Arrays.copyOf(passwordInput, passwordInput.length);
+
+    // Clear input after copying
+    Arrays.fill(passwordInput, '\0');
+}
     private String passwordConfirmation;
     private String email;
     private int userId;
