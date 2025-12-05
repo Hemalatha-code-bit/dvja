@@ -17,7 +17,7 @@ public class UserAction extends BaseController {
     // Clear input after copying
     Arrays.fill(passwordInput, '\0');
 }
-    private String passwordConfirmation;
+    private char[] passwordConfirmation;
     private String email;
     private int userId;
 
