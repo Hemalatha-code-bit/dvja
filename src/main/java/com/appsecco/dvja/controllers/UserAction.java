@@ -49,7 +49,7 @@ public class UserAction extends BaseController {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(char[] password) {
         this.password = password;
     }
 
