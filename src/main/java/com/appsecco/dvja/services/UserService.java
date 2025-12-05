@@ -49,7 +49,7 @@ public class UserService {
         if(StringUtils.isEmpty(password))
             return false;
 
-        return user.getPassword().equals(hashEncodePassword(password));
+    return BCrypt.checkpw(new String(password), user.getPassword());
     }
 
     public List<User> findAllUsers() {
